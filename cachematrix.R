@@ -3,11 +3,11 @@
 
 # Makes a Cache Matrix
 makeCacheMatrix <- function(x = matrix()) {
-
+	x <- rbind(c(1, -1/4), c(-1/4, 1))
 }
 
 
 # inverts the Matrix
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+cacheSolve <- function(x) {
+        return solve(x)%*%x
 }
