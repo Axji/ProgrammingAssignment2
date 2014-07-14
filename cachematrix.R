@@ -1,14 +1,13 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-# Makes a Cache Matrix
+# Makes a Matrix so it can cache the inverted Matrix of it self
 makeCacheMatrix <- function(x = matrix()) {
 	invert <- NULL
 	
 	set <- 	function(y) {
                 x <<- y
-                
-			}
+            }
 	get <- function() x
 	
 	setinv <-function(inverse) invert <<-inverse
@@ -18,14 +17,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-# inverts the Matrix
+# inverts the Matrix if its already inverted take the one from the Cache
 cacheSolve <- function(x) {
         invert <- x$getinv()
 		if(!is.null(invert){
 			return(invert)
 		}
 		mx <- x$get()
-		invert = solve(mx)%*%mx
+		invert <- solve(mx)%*%mx
 		x$setinv(invert)
 		return invert
 		
