@@ -24,7 +24,7 @@ cacheSolve <- function(x) {
 			return(invert)
 		}
 		mx <- x$get()
-		invert <- solve(mx)%*%mx
+		invert <- solve(mx)
 		x$setinv(invert)
 		return invert
 		
