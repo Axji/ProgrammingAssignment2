@@ -7,7 +7,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	
 	set <- 	function(y) {
                 x <<- y
-				## Matrix changed => time to calculate a new inverse
+				## Matrix changed => throw away the "old" one
 				invert <- NULL
             }
 	get <- function() x
