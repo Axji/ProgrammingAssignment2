@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-# Makes a Matrix so it can cache the inverted Matrix of it self
+# Makes a Matrix so it can cache the inverted Matrix of itself
 makeCacheMatrix <- function(x = matrix()) {
 	invert <- NULL
 	
@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-# inverts the Matrix if its already inverted take the one from the Cache
+# inverts the Matrix; if it's already inverted, take the one from the cache
 cacheSolve <- function(x) {
         invert <- x$getinv()
 		if(!is.null(invert){
